@@ -45,7 +45,7 @@ permalink: /guide/catalogue/
 │   │   ├── index.js  # 路由主页面
 │   ├── stores  # pinia 状态管理
 │   │   ├── modules  # 根据不同模块区分
-│   │   |      ├── common.js # 通用状态 
+│   │   |      ├── common.js # 通用状态
 │   │   |      ├── examplesRoutes.js # 组件例子路由
 │   │   |      ├── permission.js # 权限路由状态
 │   │   |      ├── tabs.js # 菜单标签页
@@ -54,17 +54,18 @@ permalink: /guide/catalogue/
 │   │   |      ├── ...
 │   │   ├── index.js  # pinia主页面
 │   ├── style  # 全局样式
+│   │   ├── themes  # 皮肤样式配置文件
 │   │   ├── common.scss  # 通用样式文件
+│   │   ├── handle.scss  # 处理皮肤样式文件
 │   │   ├── index.scss  # 主样式文件
 │   │   ├── reset.scss  # 全局重置样式文件
 │   │   ├── resetui.scss  # 全局覆盖 iview 库样式文件
-│   │   ├── variable.css  # 全局变量 自定义样式配置文件
 │   │   ├── ...
 │   ├── utils  # 全局工具方法
 │   │   ├── module
 │   │   |      ├── common.js # 全局公用方法，深拷贝，树结构数据组装等
-│   │   |      ├── doEcharts.js # 全局echarts配置方法 
-│   │   |      ├── system.js # 全局system公用方法，install等 
+│   │   |      ├── doEcharts.js # 全局echarts配置方法
+│   │   |      ├── system.js # 全局system公用方法，install等
 │   │   ├── index.js  # 引入所有模块js
 │   ├── views  # 存放编写业务代码页面
 │   ├── App.vue  # 入口页面
