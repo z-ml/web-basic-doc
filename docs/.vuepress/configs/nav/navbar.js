@@ -17,6 +17,9 @@ export const navbar = [{
     children: [{
       text: '图标',
       link: '/guide/icon/'
+    }, {
+      text: '换肤',
+      link: '/guide/theme/'
     }]
   }, {
     text: '测试',

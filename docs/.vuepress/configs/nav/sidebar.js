@@ -6,12 +6,13 @@ export const sidebar = {
       '/guide/start/',
       '/guide/catalogue/',
       '/guide/config/',
-      '/guide/test1/'
+      '/guide/test1/',
     ]
   }, {
     text: '高阶',
     children: [
       '/guide/icon/',
+      '/guide/theme/',
     ]
   }],
   '/component-document/': [{
