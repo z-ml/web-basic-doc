@@ -1,7 +1,7 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig } from 'vuepress'
+import { zmlTheme } from '../../theme'
 
 import { navbar, sidebar, plugins } from './configs'
-
 export default defineUserConfig({
   lang: 'zh-CN',
   title: '前端框架文档',
@@ -21,9 +21,9 @@ export default defineUserConfig({
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
   },
   plugins: plugins,
-  theme: defaultTheme({
+  theme: zmlTheme({
     navbar,
     sidebar,
-    sidebarDepth: 1,
+    sidebarDepth: 2,
   }),
 })

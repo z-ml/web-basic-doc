@@ -4,11 +4,7 @@
       <div class="right-menu-title">目录</div>
       <div class="right-menu-content">
         <div
-          :class="[
-            'right-menu-item',
-            'level' + item.level,
-            { active: item.slug === hashText },
-          ]"
+          :class="['right-menu-item', 'level' + item.level, { active: item.slug === hashText }]"
           v-for="(item, i) in headers"
           :key="i"
         >
@@ -22,23 +18,27 @@
 import { onMounted, reactive, watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { usePageData } from '@vuepress/client'
+import { jsonToArray, deepCopy } from '../util'
 
 const pageData = usePageData()
 const route = useRoute()
 let hashText = ref('')
-let headers = reactive([])
+let headers = ref([])
 
 function getHashText() {
   hashText.value = decodeURIComponent(window.location.hash.slice(1))
 }
 
+function getHeadersData() {
+  headers.value = jsonToArray(deepCopy(pageData.value.headers))
+}
+
 onMounted(() => {
-  pageData.value.headers.forEach((row) => {
-    headers.push(row)
-  })
+  getHeadersData()
 })
 
 watch(route, () => {
+  getHeadersData()
   getHashText()
 })
 </script>
@@ -52,6 +52,11 @@ $rightMenuWidth: 230px;
   margin-right: -($rightMenuWidth + 55px);
   top: 0;
   font-size: 0.8rem;
+  .right-menu-margin {
+    margin-top: 4.6rem;
+    border-radius: 3px;
+    overflow: hidden;
+  }
   .right-menu-title {
     &:after {
       content: '';
