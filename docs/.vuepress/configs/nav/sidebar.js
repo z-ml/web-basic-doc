@@ -8,6 +8,7 @@ export const sidebar = {
         '/guide/catalogue/',
         '/guide/config/',
         '/guide/routerMenu/',
+        '/guide/git/',
         '/guide/test1/',
       ],
     },
