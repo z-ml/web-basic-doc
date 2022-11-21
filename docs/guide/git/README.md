@@ -1,7 +1,7 @@
 ---
 title: git常用命令
 date: 2022-11-21
-permalink: /guide/start/
+permalink: /guide/git/
 ---
 
 # git 常用命令
