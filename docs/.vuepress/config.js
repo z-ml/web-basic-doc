@@ -1,13 +1,6 @@
-import {
-  defineUserConfig,
-  defaultTheme
-} from 'vuepress'
+import { defineUserConfig, defaultTheme } from 'vuepress'
 
-import {
-  navbar,
-  sidebar,
-  plugins
-} from './configs'
+import { navbar, sidebar, plugins } from './configs'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -15,10 +8,13 @@ export default defineUserConfig({
   description: '即插即用的框架',
   port: 8889,
   head: [
-    ['link', {
-      rel: 'icon',
-      href: '..//logo.png'
-    }]
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '..//logo.png',
+      },
+    ],
   ],
   markdown: {
     lineNumbers: true, // 显示代码块的行号
@@ -30,5 +26,4 @@ export default defineUserConfig({
     sidebar,
     sidebarDepth: 1,
   }),
-
 })
