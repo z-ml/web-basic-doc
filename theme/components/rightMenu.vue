@@ -1,5 +1,5 @@
 <template>
-  <div class="right-menu-wrapper">
+  <div class="right-menu-wrapper" v-if="headers.length">
     <div class="right-menu-margin">
       <div class="right-menu-title">目录</div>
       <div class="right-menu-content">
