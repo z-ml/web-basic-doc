@@ -1,6 +1,8 @@
 import { getDirname, path } from '@vuepress/utils'
 import { defaultTheme } from '@vuepress/theme-default'
 
+import { navbar, sidebar, plugins } from './configs'
+
 const __dirname = getDirname(import.meta.url)
 
 export const zmlTheme = (options) => {
@@ -10,15 +12,14 @@ export const zmlTheme = (options) => {
 
     // 主题的客户端配置文件的路径
     clientConfigFile: path.resolve(__dirname, 'client.js'),
-
     // 使用插件
-    plugins: [
-      // ...
-    ],
-
+    plugins: plugins,
     // 其他的插件 API 也都可用
-    // 继承默认主题
-    extends: defaultTheme(options),
+    // 继承默认主题 sidebar 中必须要存在标题链接才能使 active-header-links插件正常工作
+    // https://v2.vuepress.vuejs.org/zh/reference/plugin/active-header-links.html#headerlinkselector
+    extends: defaultTheme({
+      navbar: navbar,
+      sidebar: sidebar,
+    }),
   }
 }
-

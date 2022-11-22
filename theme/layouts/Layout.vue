@@ -2,10 +2,13 @@
   <Home v-if="frontmatter.home"></Home>
   <ParentLayout v-else>
     <template #page>
+      <sidebar></sidebar>
       <main class="page">
         <div class="custom-wrapper">
           <rightMenu></rightMenu>
-          <Content class="theme-default-content"></Content>
+          <div class="theme-default-content">
+            <Content></Content>
+          </div>
         </div>
       </main>
     </template>
@@ -13,23 +16,14 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch } from 'vue'
 import Home from '@vuepress/theme-default/components/Home.vue'
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
-import { usePageData } from '@vuepress/client'
+import { usePageFrontmatter } from '@vuepress/client'
 import { useRoute } from 'vue-router'
+import rightMenu from '../components/rightMenu.vue'
+import sidebar from '../components/sidebar.vue'
 
-const pageData = usePageData()
-const route = useRoute()
-const frontmatter = ref({})
-
-onMounted(() => {
-  frontmatter.value = pageData.value.frontmatter
-})
-
-watch(route, () => {
-  frontmatter.value = pageData.value.frontmatter
-})
+const frontmatter = usePageFrontmatter()
 </script>
 
 <style lang="css">
