@@ -23,7 +23,7 @@ export const navbar = [
         link: '/guide/routerMenu/',
       },
       {
-        text: '路由和菜单',
+        text: 'git 常用命令',
         link: '/guide/git/',
       },
       {
