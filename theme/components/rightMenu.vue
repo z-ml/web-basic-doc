@@ -4,7 +4,11 @@
       <div class="right-menu-title">目录</div>
       <div class="right-menu-content">
         <div
-          :class="['right-menu-item', 'level' + item.level, { active: item.slug === hashText }]"
+          :class="[
+            'right-menu-item',
+            'level' + item.level,
+            { active: item.slug === hashText },
+          ]"
           v-for="(item, i) in headers"
           :key="i"
         >
@@ -15,7 +19,7 @@
   </div>
 </template>
 <script setup>
-import { onMounted, reactive, watch, ref } from 'vue'
+import { onMounted, watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { usePageData } from '@vuepress/client'
 import { jsonToArray, deepCopy } from '../util'
