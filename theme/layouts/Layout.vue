@@ -19,7 +19,6 @@
 import Home from '@vuepress/theme-default/components/Home.vue'
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { usePageFrontmatter } from '@vuepress/client'
-import { useRoute } from 'vue-router'
 import rightMenu from '../components/rightMenu.vue'
 import sidebar from '../components/sidebar.vue'
 
