@@ -28,16 +28,65 @@
 import { sidebar } from '../configs/nav/sidebar'
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
+import { isString, resolveLocalePath } from '@vuepress/shared'
+import { usePageData } from '@vuepress/client'
 const route = useRoute()
-// 获取一级菜单路由
-const firstRoutePath = ref('')
-if (route.path === '/') {
-  firstRoutePath.value = `/guide/`
-} else {
-  firstRoutePath.value = `/${route.path.split('/')[1]}/`
+const themeLocaleData = useThemeLocaleData()
+const sidebarConfig = themeLocaleData.value.sidebar
+const sidebarPath = resolveLocalePath(sidebarConfig, route.path)
+
+/**
+ * Resolve sidebar items if the config is an array
+ */
+const resolveArraySidebarItems = (sidebarConfig, sidebarDepth) => {
+  const route = useRoute()
+  const page = usePageData()
+  const handleChildItem = (item) => {
+    let childItem
+    if (isString(item)) {
+      childItem = useNavLink(item)
+    } else {
+      childItem = item
+    }
+    if (childItem.children) {
+      return {
+        ...childItem,
+        children: childItem.children.map((item) => handleChildItem(item)),
+      }
+    }
+    // if the sidebar item is current page and children is not set
+    // use headers of current page as children
+    if (childItem.link === route.path) {
+      // skip h1 header
+      const headers =
+        page.value.headers[0]?.level === 1
+          ? page.value.headers[0].children
+          : page.value.headers
+      return {
+        ...childItem,
+        children: headersToSidebarItemChildren(headers, sidebarDepth),
+      }
+    }
+    return childItem
+  }
+  return sidebarConfig.map((item) => handleChildItem(item))
 }
-// 通过一级菜单路由找到对应的侧边栏二级菜单
-const sidebarList = sidebar[firstRoutePath.value]
+
+/**
+ * Util to transform page header to sidebar item
+ */
+const headerToSidebarItem = (header, sidebarDepth) => ({
+  text: header.title,
+  link: header.link,
+  children: headersToSidebarItemChildren(header.children, sidebarDepth),
+})
+const headersToSidebarItemChildren = (headers, sidebarDepth) =>
+  sidebarDepth > 0
+    ? headers.map((header) => headerToSidebarItem(header, sidebarDepth - 1))
+    : []
+
+const sidebarList = resolveArraySidebarItems(sidebarConfig[sidebarPath], 2)
 </script>
 
 <style scoped lang="scss">
