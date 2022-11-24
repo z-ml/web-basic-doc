@@ -47,15 +47,6 @@ export const navbar = [
           },
         ],
       },
-      {
-        text: '测试',
-        children: [
-          {
-            text: '测试1',
-            link: '/guide/test1/',
-          },
-        ],
-      },
     ],
   },
   {

@@ -28,7 +28,6 @@ export const sidebar = {
           link: '/guide/git/',
         },
         '/guide/request/',
-        '/guide/test1/',
       ],
     },
     {
