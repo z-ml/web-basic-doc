@@ -3,6 +3,7 @@
   --textLightenColor: #0085AD;
   --sidebar-width: 16rem;
   --borderColor: rgba(0,0,0,0.15);
+  --content-width: 860px;
   body {
     font-size: 1rem;
   }
@@ -23,6 +24,9 @@
     }
     h2 {
       padding-bottom: 0.3rem;
+    }
+    th, td {
+      padding: 0.6em 1em;
     }
   }
 }
