@@ -68,7 +68,10 @@ function getTheme() {
    *  果不为空的话就将对应获取到的值给到 data-skin
    **/
   if (localStorage.getItem('type') !== null) {
-    window.document.documentElement.setAttribute('data-skin', localStorage.getItem('type'))
+    window.document.documentElement.setAttribute(
+      'data-skin',
+      localStorage.getItem('type')
+    )
   } else {
     window.document.documentElement.setAttribute('data-skin', 'dark')
   }
@@ -117,6 +120,8 @@ $themes: (
 ### dark.scss 填写
 
 声明各个颜色的变量
+<br>
+`命名规范： 功能名称(btnPrimary) + 样式名称(Bg) + 样式状态(Hover) 采用驼峰式命名`
 
 ```scss
 $dark: (
