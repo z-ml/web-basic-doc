@@ -27,6 +27,10 @@ export const navbar = [
         link: '/guide/git/',
       },
       {
+        text: 'http请求',
+        link: '/guide/request/',
+      },
+      {
         text: '进阶',
         children: [
           {

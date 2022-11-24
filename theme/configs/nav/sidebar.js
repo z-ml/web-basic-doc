@@ -27,10 +27,8 @@ export const sidebar = {
           text: 'git 相关',
           link: '/guide/git/',
         },
-        {
-          text: '测试',
-          link: '/guide/test1/',
-        },
+        '/guide/request/',
+        '/guide/test1/',
       ],
     },
     {
