@@ -42,6 +42,7 @@ export const sidebar = {
           text: '换肤',
           link: '/guide/theme/',
         },
+        '/guide/RABC/',
       ],
     },
   ],

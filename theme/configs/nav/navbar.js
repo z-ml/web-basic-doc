@@ -41,6 +41,10 @@ export const navbar = [
             text: '换肤',
             link: '/guide/theme/',
           },
+          {
+            text: 'RABC权限',
+            link: '/guide/RABC/',
+          },
         ],
       },
       {
