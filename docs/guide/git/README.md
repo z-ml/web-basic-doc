@@ -1,10 +1,10 @@
 ---
-title: git常用命令
+title: git 相关
 date: 2022-11-21
 permalink: /guide/git/
 ---
 
-# git 常用命令
+# git 相关
 
 ## 提交规范
 
