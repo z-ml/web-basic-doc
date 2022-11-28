@@ -42,6 +42,8 @@ export const sidebar = {
           link: '/guide/theme/',
         },
         '/guide/RABC/',
+        '/guide/auth/',
+        '/guide/utils/',
       ],
     },
   ],

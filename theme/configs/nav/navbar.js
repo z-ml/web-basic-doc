@@ -45,6 +45,14 @@ export const navbar = [
             text: 'RABC权限',
             link: '/guide/RABC/',
           },
+          {
+            text: '授权（待更新）',
+            link: '/guide/auth/',
+          },
+          {
+            text: '函数工具库',
+            link: '/guide/utils/',
+          },
         ],
       },
     ],
