@@ -5,10 +5,10 @@ import { navbar, sidebar, plugins } from './configs'
 
 const __dirname = getDirname(import.meta.url)
 
-export const zmlTheme = (options) => {
+export const customTheme = (options) => {
   // 返回一个主题对象
   return {
-    name: 'vuepress-theme-zml',
+    name: 'vuepress-theme-custom',
 
     // 主题的客户端配置文件的路径
     clientConfigFile: path.resolve(__dirname, 'client.js'),
@@ -20,6 +20,8 @@ export const zmlTheme = (options) => {
     extends: defaultTheme({
       navbar: navbar,
       sidebar: sidebar,
+      lastUpdatedText: '上次更新',
+      contributorsText: '贡献者',
     }),
   }
 }

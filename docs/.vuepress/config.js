@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress'
-import { zmlTheme } from '../../theme'
+import { customTheme } from '../../theme'
 export default defineUserConfig({
   lang: 'zh-CN',
   title: '前端框架文档',
@@ -14,5 +14,5 @@ export default defineUserConfig({
       },
     ],
   ],
-  theme: zmlTheme(),
+  theme: customTheme(),
 })
