@@ -9,6 +9,8 @@
           <div class="theme-default-content">
             <Content></Content>
           </div>
+          <PageMeta />
+          <PageNav />
         </div>
       </main>
     </template>
@@ -18,6 +20,8 @@
 <script setup>
 import Home from '@vuepress/theme-default/components/Home.vue'
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
+import PageMeta from '@theme/PageMeta.vue'
+import PageNav from '@theme/PageNav.vue'
 import { usePageFrontmatter } from '@vuepress/client'
 import rightMenu from '../components/rightMenu.vue'
 import sidebar from '../components/sidebar.vue'
