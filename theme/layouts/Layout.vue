@@ -26,6 +26,9 @@ const frontmatter = usePageFrontmatter()
 </script>
 
 <style lang="css">
+.page {
+  padding-right: 250px;
+}
 .custom-wrapper {
   max-width: 860px;
   margin: 0 auto;
