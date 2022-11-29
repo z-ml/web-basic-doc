@@ -55,6 +55,15 @@ export const navbar = [
           },
         ],
       },
+      {
+        text: '其他',
+        children: [
+          {
+            text: '常见问题',
+            link: '/guide/FAQ/',
+          },
+        ],
+      },
     ],
   },
   {

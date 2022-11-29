@@ -46,6 +46,10 @@ export const sidebar = {
         '/guide/utils/',
       ],
     },
+    {
+      text: '其他问题',
+      children: ['/guide/FAQ/'],
+    },
   ],
   '/component-document/': [
     {
