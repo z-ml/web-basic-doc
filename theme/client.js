@@ -3,7 +3,7 @@ import pkg from 'view-ui-plus'
 const { Button } = pkg
 import 'view-ui-plus/dist/styles/viewuiplus.css'
 import Layout from './layouts/Layout.vue'
-import { setupSidebarItems } from './hook/index.js'
+import { setupSidebarItems } from './hooks/index.js'
 export default defineClientConfig({
   layouts: {
     Layout,

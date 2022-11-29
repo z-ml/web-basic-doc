@@ -6,7 +6,7 @@ permalink: /guide/utils/
 
 # 函数工具库
 
-本系统中已经集成了若干公共方法，在 `src/util` 中，下面是一些重要:chestnut:
+本系统中已经集成了若干公共方法，在 `src/utils` 中，下面是一些重要:chestnut:
 
 ## `common` 常用方法
 

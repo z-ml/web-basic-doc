@@ -26,7 +26,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { useSidebarItems } from '../hook/index'
+import { useSidebarItems } from '../hooks/index'
 
 const route = useRoute()
 const sidebarList = useSidebarItems()

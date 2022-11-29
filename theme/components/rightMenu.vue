@@ -22,7 +22,7 @@
 import { onMounted, watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { usePageData } from '@vuepress/client'
-import { jsonToArray, deepCopy } from '../util'
+import { jsonToArray, deepCopy } from '../utils'
 
 const pageData = usePageData()
 const route = useRoute()
