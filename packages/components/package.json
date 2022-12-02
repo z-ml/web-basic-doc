@@ -1,8 +1,8 @@
 {
   "name": "@web-basic-doc/components",
   "version": "1.0.0",
-  "private": false,
   "main": "index.ts",
+  "private": false,
   "scripts": {
     "build": "vite build"
   },
@@ -14,7 +14,7 @@
     "vue3组件库"
   ],
   "author": "zml",
-  "license": "MIT",
+  "license": "ISC",
   "typings": "lib/index.d.ts",
   "dependencies": {
     "@web-basic-doc/utils": "workspace:^1.0.0"
