@@ -1,0 +1,22 @@
+{
+  "name": "@web-basic-doc/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "vue3组件库"
+  ],
+  "author": "zml",
+  "license": "MIT",
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@web-basic-doc/utils": "workspace:^1.0.0"
+  }
+}

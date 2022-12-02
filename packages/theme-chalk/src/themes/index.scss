@@ -1,0 +1,54 @@
+/**
+*   _themes.scss
+*   当HTML的data-skin为dark时，样式引用dark
+*   data-skin为其他值时，就采用对应的默认样式
+*   注意一点是，每套配色方案里的key可以自定义但必须一致，不然就会混乱
+*   这是定义好的对应变量的颜色（需要什么都可以自行定义并引用）：
+*   字体： font_color1
+*   背景： background_color1
+*   边框： border_color1
+**/
+@import "./dark.scss";
+@import "./light.scss";
+// bg
+$bg_041129: #041129;
+$bg_011B37: #011B37;
+
+$bg-darkblue-block: #041129; //系统背景色
+$bg-menu-hover: rgba(43, 132, 226, 0.5); //菜单鼠标放入hover
+$bg-menu-active: linear-gradient(270deg, rgba(19, 122, 185, 0) 0%, #2B84E2 100%); //菜单选中渐变色
+$bg-menu-home: #073250; //菜单首页背景色
+$bg-menu-top: linear-gradient(270deg, #11A3FB 0%, #09284D 100%); //菜单顶部渐变色
+$boder_color_07355E: #07355E;
+$bg-blue-primary: #0E2246;
+$bg-blue-block: #071B39;
+$bg-table-block: #041939;
+$bg-blue-row: #062042;
+$bg-table-header: #092955;
+$input-inner-bg: #02162B;
+// border
+$border-input-normal: #10457E; // 输入框
+$border-active: #27A4EB;
+// font
+$font-color-link: #2B84E2;
+$font-color-icon: #22A8DF;
+$font-color-grey: #8D9CB1;
+$font-color-white: #fff;
+$font-color-special: #24edde;
+$font-table-action: #2B84E2;
+
+$color-success: #0E8F0E;
+$color-failed: #BC3C19;
+$color-wait: #979898;
+$color-b77a2a: #b77a2a;
+$color-17a8a8 : #babdbd;
+$color-D66418 : #D66418;
+$color-787878 : #787878;
+$color-D9B916 : #D9B916;
+$color-other: #1a82be;
+$color-tip: #24E0EF;
+
+$themes: (
+  dark: $dark,
+  light: $light
+);
